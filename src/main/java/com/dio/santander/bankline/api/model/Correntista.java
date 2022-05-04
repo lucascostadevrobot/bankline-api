@@ -18,7 +18,7 @@ public class Correntista {
     /*Informando que Correntista possui uma Conta->Classe*/
 
     /*Após realizar a criação das classes models é necessário criar nossas classes de Persistência
-      Instalando Spring Boot Tools ou JPA BUDY
+      Instalando Spring Boot Tools ou JPA BUDY.
      */
     private Conta conta;
 
