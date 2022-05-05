@@ -1,0 +1,48 @@
+==============GUIA DE DESENVOLVIMENTO PROJETO===================
+
+=====================================================================================
+1°-> Realizar o Dowloand das ferramentas para preparar o ambiente de desenvolvimento
+. Banco de Dados: PostgreSQL
+.IDE: IntelliJe
+. Java na versão: 11 Adiante Adopten JDK
+.Versionamento: GitDesktop login com github
+.GIT: Instalar o GIT no computador
+=====================================================================================
+
+=====================================================================================
+
+2º-> Entender qual é a proposta do projeto, ou seja, nos conceituar dentro das possibilidades.
+
+=====================================================================================
+
+
+=====================================================================================
+
+3°-> Inicializar nosso projeto no Spring Initialzr
+. Java 11
+. Estrutura Mavem Project
+
+=====================================================================================
+
+=====================================================================================
+4º-> Criar nosso pacote Model de acordo com Diagrama e Mapear
+. Criar nossas classes de modelo
+. Gerar os Gatters and Setters
+
+=====================================================================================
+
+=====================================================================================
+5º-> Realizar a instalação dos Plugins Spring Boot Tools e JPA BUDY
+. Utilizar alt+insert para adicionar os Starts usando Spring Boot Assistent
+. Adicionar as depências Spring Boot data JPA
+.Adicionar as depêndencias PostgreSQL
+
+=====================================================================================
+
+=====================================================================================
+6º-> Criar os mapeamentos nas classes do pacote Model de acordo com a regra de negócio DIAGRAMA CLASSE
+. Mapenar as classes de acordo com grau de importância
+.Analisar as Anotações no projeto e necessidades para mapear no banco de dados.
+
+=====================================================================================
+
