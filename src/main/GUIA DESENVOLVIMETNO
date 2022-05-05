@@ -46,3 +46,14 @@
 
 =====================================================================================
 
+7º-> Adicionar a dependência Swagger org.springdoc
+. Essa biblioteca ajuda autotizar a geração de documenta da API usando projetos de inciialização de Spring.
+Funciona examinando um aplicativo em tempo de execução para inferir semântica de API com base
+em configurações de Spring. Estrutura de Classes e várias anotações. springdoc-openapi
+  <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-ui</artifactId>
+      <version>1.6.8</version>
+   </dependency>
+=====================================================================================
+
