@@ -57,3 +57,21 @@ em configurações de Spring. Estrutura de Classes e várias anotações. spring
    </dependency>
 =====================================================================================
 
+=====================================================================================
+
+8°-> Criar nosso pacote Repositorio (Repository)
+. Quando falamos de qualquer ação que queremos fazer com nossa aplicação, a mesma precisa ter interação com
+nosso Banco de Dados.
+. Como é que vamos determinar alguém para realizar operações em um correntista ou movimentação.
+.Quando falamos em JPA e Spring Boot Data JPA existe um mecanismo chamado de Repositórios que o proprio
+framework dispinibiliza pra gente.
+
+=====================================================================================
+
+9º Criando as Interfaces dentro do pacote repositorios
+-->Então ao criarmos, precisamos criar em vez de Class. Precisamos criar Interfaces
+
+. Primeiro precisamos criar um "cara" Movimentação
+. Primeiro  também precisamos criar um "cara" correntista
+
+=====================================================================================

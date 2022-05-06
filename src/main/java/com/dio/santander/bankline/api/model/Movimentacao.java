@@ -11,9 +11,11 @@ public class Movimentacao {
     private Integer id;
     @Column(name = "data_hora")
     private LocalDateTime dataHora;
-
     private String descricao;
     private Double valor;
+
+    @Column(name = "id_conta")
+    private Integer idConta;
 
     /*Informo a minha classe Movimentacao qual o tipo ela será MovimentacaoTipo->Classe*/
     @Enumerated(EnumType.STRING)
@@ -57,5 +59,13 @@ public class Movimentacao {
 
     public void setTipo(MovimentacaoTipo tipo) {
         this.tipo = tipo;
+    }
+
+    public Integer getIdConta() {
+        return idConta;
+    }
+
+    public void setIdConta(Integer idConta) {
+        this.idConta = idConta;
     }
 }

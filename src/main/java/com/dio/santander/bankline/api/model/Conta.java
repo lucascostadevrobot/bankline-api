@@ -3,7 +3,7 @@ package com.dio.santander.bankline.api.model;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-@Embeddable
+@Embeddable /*Diz que essa Classe contém informações que também serão armazenadas nas TAB correntistas*/
 public class Conta {
 
     @Column(name = "conta_numero")
