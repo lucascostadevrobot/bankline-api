@@ -68,10 +68,34 @@ framework dispinibiliza pra gente.
 
 =====================================================================================
 
-9º Criando as Interfaces dentro do pacote repositorios
+9º->Criando as Interfaces dentro do pacote repositorios
 -->Então ao criarmos, precisamos criar em vez de Class. Precisamos criar Interfaces
 
 . Primeiro precisamos criar um "cara" Movimentação
 . Primeiro  também precisamos criar um "cara" correntista
 
+.Segundo Criar Interface CorrentistaRepository
+.Segundo Criar Interface MovimentacaoRepository
+
+=====================================================================================
+
+10º-> Configurando as Classes de Interface com Extends
+. A classe CorrentistaRepository precisa entender que ela vai extender do Framework através de
+uma outroa interface e precisamos determinar a classe dentro dessa interface JPA que estaremos
+trabalhando com a Classe Correntista:
+.Interface extendida: JpaRepository do próprio framework
+
+public interface CorrentistaRepository extends JpaRepository<Correntista, Integer>{
+
+}
+
+. A classe Movimentacao Repository precisa entender que ela vai extender também uma outra
+interface através de uma outra iterface e precisamos determinar a classe dentro dessa
+interface JPA na qual nós iremos trablhar.
+
+.Interface extendida: JpaRepository do próprio framework
+
+public interface MovimentacaoRepository extends JpaRepository<Movimentacao, Integer>{
+
+}
 =====================================================================================
