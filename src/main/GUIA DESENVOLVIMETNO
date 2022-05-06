@@ -99,3 +99,22 @@ public interface MovimentacaoRepository extends JpaRepository<Movimentacao, Inte
 
 }
 =====================================================================================
+
+11º-> Feito isso nós precisamos subir a nossa aplicação para que o usuário consiga acessar
+e finalmente consumir nossa API.
+. Seguindo o padrão SpringMVC nós temos uma camada de Controllers que é a parte que diz:
+A partir de agora podemos disponibilizar rotas e as pessoas interagirem na minha aplicação
+
+--> Criar um pacote de Controllers
+São essas classes controllers que  saberão tudo sobre nosso webservice para gerar os recursos
+para trabalharmos com o correntista: Criar correntista, atualizar, deletar.
+
+. Primeiro criar uma classe CorrentistaController dentro do pacote Controller:
+
+. Com isso saberemos que nossa aplicação PRECISARÁ SER WEB A PARTIR DE AGORA.
+
+=====================================================================================
+
+=====================================================================================
+12º-> Precisamos adicionar a dependência Spring Web para nossa aplicação se torna Web.
+=====================================================================================
