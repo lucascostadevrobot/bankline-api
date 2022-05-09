@@ -3,13 +3,18 @@ package com.dio.santander.bankline.api.service;
 import com.dio.santander.bankline.api.dto.NovaMovimentacao;
 import com.dio.santander.bankline.api.model.Movimentacao;
 import com.dio.santander.bankline.api.model.MovimentacaoTipo;
+import com.dio.santander.bankline.api.repository.MovimentacaoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
 @Service
 public class MovimentacaoService {
-public void save (NovaMovimentacao novaMovimentacao){
+    @Autowired
+    private MovimentacaoRepository repository;
+
+    public void save (NovaMovimentacao novaMovimentacao){
 
     Movimentacao movimentacao = new Movimentacao();
 
@@ -22,6 +27,8 @@ public void save (NovaMovimentacao novaMovimentacao){
     movimentacao.setIdConta(novaMovimentacao.getIdConta());
     movimentacao.setTipo(novaMovimentacao.getTipo());
     movimentacao.setValor(valor); //Valor passado do calculo de acordo com a receita da regra acima.
+
+        repository.save(movimentacao); //Ter operações de movimentação em nosso sistema
 }
 
 }
