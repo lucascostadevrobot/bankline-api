@@ -146,3 +146,18 @@ consegue buscar informações ao Banco.
 
 
 =====================================================================================
+
+=====================================================================================
+
+14º-> Criar um insert em nosso banco de dados manual para testar se nossa aplicação está realizando a consulta
+. Ir em tab_correntista > Botão direito > Scripts > CREATE INSERT > Mudar campos do Script > Select * From tab_correntistas;
+.Run na Aplicação
+
+=====================================================================================
+
+15º -> Agora precisamos que a nossa aplicação pegue os dados e salve no Banco de Dados
+
+. Classe CorrentistaController:
+Criar um metodo na classe para que nossa aplicação capture os dados e faça persistências no Banco de Dados
+
+=====================================================================================
