@@ -21,7 +21,7 @@ public void save (NovaMovimentacao novaMovimentacao){
     movimentacao.setDescricao(novaMovimentacao.getDescricao());
     movimentacao.setIdConta(novaMovimentacao.getIdConta());
     movimentacao.setTipo(novaMovimentacao.getTipo());
-    movimentacao.setValor(valor); //Valor passado do calculo de acordo com a receita da regra acima
+    movimentacao.setValor(valor); //Valor passado do calculo de acordo com a receita da regra acima.
 }
 
 }
