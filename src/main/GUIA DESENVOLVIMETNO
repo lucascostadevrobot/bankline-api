@@ -229,3 +229,48 @@ e realizar as interações para testarmos nossa aplicação.
 .localhost:8080/swagger-ui/index.html
 
 =====================================================================================
+
+=====================================================================================
+
+19º-> Começar as configurações para próxima classe e regra de negocio Movimentações
+.Copiar a classe CorrentistaController e renomear para MovimentacaoController
+.Realizar as mudanças na classe de acordo com a necessidade
+
+.Criar uma nova classe no pacote DTO:
+Class NovaMovimentacao
+
+.Adicionar os atributos da classe Movimentacao
+    private String descricao;
+    private Double valor;
+    private MovimentacaoTipo tipo;
+    private Integer idConta;
+
+. Gerar os geters and Seters na classe NovaMovimentacao
+
+.Criar a classe no pacote Service: MovimentacaoService
+ /*Toda vez que a gente tentar salvar uma nova movimentação
+    A gente vai criar a movimentacao como no correntista
+    e vamos informar: Movimentação,sua data e hora vamos informar
+     */
+
+         Movimentacao movimentacao = new Movimentacao();
+         movimentacao.setDataHora(LocalDateTime.now());
+         movimentacao.setDescricao(novaMovimentacao.getDescricao());
+         movimentacao.setIdConta(novaMovimentacao.getIdConta());
+         movimentacao.setTipo(novaMovimentacao.getTipo());
+         movimentacao.setValor(novaMovimentacao.getValor());
+ Regra do negócio:
+ Se o valor for de receita ele será positivo
+ Se o valor for de despesa ele será nagativo
+
+ Criar a regra na classe MovimentacaoService
+     Double valor = novaMovimentacao.getTipo()== MovimentacaoTipo.RECEITA ? novaMovimentacao.getValor() :
+             novaMovimentacao.getValor() * -1;
+
+             ou
+         Double  valor = novaMovimentacao.getValor();
+         if(novaMovimentacao.getTipo() == MovimentacaoTipo.DESPESA)
+             valor = valor * -1;
+
+
+=====================================================================================
