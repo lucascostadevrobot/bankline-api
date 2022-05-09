@@ -160,4 +160,53 @@ consegue buscar informações ao Banco.
 . Classe CorrentistaController:
 Criar um metodo na classe para que nossa aplicação capture os dados e faça persistências no Banco de Dados
 
+.RequestBody para que essa requisiçao faça para do corpo da requisição
+
+@PostMapping anotação que vai receber via Post um correntista atraves do paramentro do metodo
+
+public void save (@RequestBody Correntista correntista){
+
+}
+
+=====================================================================================
+16º-> Criando o pacote DTO
+.  Como nosso correntista ele tem somente as informações de CPF e nome
+e a conta, nós iremos fazer a seguinte analogia:
+Simulando que a Conta vai existir no cadastro de um correntista e não o correntista vai dizer
+o número da sua conta e seu saldo, nós precisamos simular que vamos receber um "carinha"
+que a gente denomina como uma camada de interação entre nossos usuários
+
+.DT0>NovoCorrentista
+
+.Para que eu possa cadastrar um novo correntista eu irei precisar de Nome, CPF
+e por isso precisamos criar as variaveis dentro de NovoCorrentista
+
+ private String nome;
+ private String cpf;
+ . Gerar os getters and Setters
+
+ . Infelizmente não podemos trabalhar com a nossa regra de negócio na nossa classe CorrentistaRepository
+ por ela ser do tipo INTERFACE.
+ .Por isso criaremos nossa camada de Services
+=====================================================================================
+
+=====================================================================================
+17º-> Criar o pacote Service
+
+.Criar a classe CorrentistaService
+
+. Mapear essa classe com anotação @Service que dizemos que ela será do tipo serviço
+ @Autowired
+    private CorrentistaRepository repository;
+
+    public void  save (NovoCorrentista novoCorrentista){
+        Correntista correntista = new Correntista();
+        correntista.setCpf(novoCorrentista.getCpf());
+        correntista.setNome(novoCorrentista.getNome());
+
+        Conta conta = new Conta();
+        conta.setSaldo(0.0); /*Todo novo correntista tera o inicio da conta 0.0*/
+        conta.setNumero(new Date().getTime()); /*Digo que vai gerar numero da nossa conta*/
+
+        correntista.setConta(correntista);
 =====================================================================================
