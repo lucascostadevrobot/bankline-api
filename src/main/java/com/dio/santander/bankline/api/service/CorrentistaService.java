@@ -24,6 +24,7 @@ public class CorrentistaService {
         conta.setSaldo(0.0); /*Todo novo correntista tera o inicio da conta 0.0*/
         conta.setNumero(new Date().getTime()); /*Digo que vai gerar numero da nossa conta*/
 
-        correntista.setConta(correntista);
+        correntista.setConta(conta);
+        repository.save(correntista);
     }
 }

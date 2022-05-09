@@ -210,3 +210,12 @@ e por isso precisamos criar as variaveis dentro de NovoCorrentista
 
         correntista.setConta(correntista);
 =====================================================================================
+
+=====================================================================================
+18º->Swagger Documentar toda nossa API para interagir e criar testes da nossas funcionalidades
+
+. Ir no google e pesquisar Swagger 3 Spring Boot
+. Implementar a depêdencia nova em nosso pom.xml
+
+
+=====================================================================================
