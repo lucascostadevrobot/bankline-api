@@ -215,7 +215,17 @@ e por isso precisamos criar as variaveis dentro de NovoCorrentista
 18º->Swagger Documentar toda nossa API para interagir e criar testes da nossas funcionalidades
 
 . Ir no google e pesquisar Swagger 3 Spring Boot
-. Implementar a depêdencia nova em nosso pom.xml
+. Implementar a depêdencia nova em nosso pom.xml versão mais recente sempre
+	<!-- Swagger UI -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.4</version>
+		</dependency>
 
+.Agora com tudo certo, podemos acessar o Swagger e ver a documentação da nossa API
+e realizar as interações para testarmos nossa aplicação.
+
+.localhost:8080/swagger-ui/index.html
 
 =====================================================================================
