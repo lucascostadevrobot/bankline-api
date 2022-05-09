@@ -272,5 +272,8 @@ Class NovaMovimentacao
          if(novaMovimentacao.getTipo() == MovimentacaoTipo.DESPESA)
              valor = valor * -1;
 
+ .Criar regra de calculo em MovimentaService
+
+
 
 =====================================================================================

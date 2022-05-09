@@ -1,9 +1,9 @@
 package com.dio.santander.bankline.api.controller;
 
-import com.dio.santander.bankline.api.dto.NovoCorrentista;
+import com.dio.santander.bankline.api.dto.NovaMovimentacao;
 import com.dio.santander.bankline.api.model.Movimentacao;
 import com.dio.santander.bankline.api.repository.MovimentacaoRepository;
-import com.dio.santander.bankline.api.service.CorrentistaService;
+import com.dio.santander.bankline.api.service.MovimentacaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +19,7 @@ public class MovimentacaoController {
     private MovimentacaoRepository repository;
 
     @Autowired
-    private CorrentistaService service;
+    private MovimentacaoService service;
 
     @GetMapping /*Dizemos que nosso metodo é uma requisição do endpoint ("/correntistas")*/
     public List<Movimentacao> findAll(){
@@ -28,7 +28,7 @@ public class MovimentacaoController {
     }
 
     @PostMapping
-    public void save(@RequestBody NovoCorrentista correntista) {
-        service.save(correntista);
+    public void save(@RequestBody NovaMovimentacao movimentacao) {
+        service.save(movimentacao);
     }
 }
