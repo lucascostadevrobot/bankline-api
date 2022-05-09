@@ -38,7 +38,7 @@ public class MovimentacaoService {
             correntistaRepository.save(correntista);
         }
 
-        repository.save(movimentacao); //Ter operações de movimentação em nosso sistema
+        repository.save(movimentacao); //Ter operações de movimentação em nosso sistema.
 }
 
 }
