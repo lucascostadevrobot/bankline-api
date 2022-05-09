@@ -118,3 +118,31 @@ para trabalharmos com o correntista: Criar correntista, atualizar, deletar.
 =====================================================================================
 12º-> Precisamos adicionar a dependência Spring Web para nossa aplicação se torna Web.
 =====================================================================================
+
+=====================================================================================
+13º-> Configura as Classes Controllers e Mapeamento
+. Mapear a classe CorrentistaController dizendo que:
+ Agora a classe será @RestControllers
+ Agora a classe será @RequestMapping("/correntistas")
+
+.Ela vai tentar realizar operações referentes ao nosso banco de dados
+
+. Criar um metodo na classe CorrentistaController para Listar
+. A nossa classe CorrentistaController não tem por si só permissão para acessar BD
+para isso ele precisa pedir a nossa classe CorrentistaRepository que é o cara que
+consegue buscar informações ao Banco.
+
+. Usar anotação @Autowired para trazer repositorio sem dar New
+
+. /*Criando Metodo para listar correntistas*/
+     @Autowired
+       private CorrentistaRepository repository;
+
+     @GetMapping /*Dizemos que nosso metodo é uma requisição do endpoint ("/correntistas")*/
+        public List<Correntista> findAll(){
+            return repository.findAll();
+
+        }
+
+
+=====================================================================================
