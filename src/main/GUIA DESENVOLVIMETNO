@@ -273,7 +273,8 @@ Class NovaMovimentacao
              valor = valor * -1;
 
  .Criar regra de calculo em MovimentaService
-
-
+=====================================================================================
 
 =====================================================================================
+20º-> Realizar o Deploy da nossa aplicação para o mundo
+. Utilizar a plataforma Heroku
