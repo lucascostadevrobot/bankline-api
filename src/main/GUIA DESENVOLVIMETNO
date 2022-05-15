@@ -273,6 +273,7 @@ Class NovaMovimentacao
              valor = valor * -1;
 
  .Criar regra de calculo em MovimentaService
+ .Assim API final está pronto- podendo sofrer mudanças.
 =====================================================================================
 
 =====================================================================================
