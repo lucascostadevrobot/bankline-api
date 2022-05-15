@@ -279,3 +279,4 @@ Class NovaMovimentacao
 =====================================================================================
 20º-> Realizar o Deploy da nossa aplicação para o mundo
 . Utilizar a plataforma Heroku.
+.Caso dê algum erro de configuração entre o Git e o Heroku enviar pelo CLI
