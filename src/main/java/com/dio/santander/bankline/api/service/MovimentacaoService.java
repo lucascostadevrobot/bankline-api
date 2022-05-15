@@ -18,27 +18,28 @@ public class MovimentacaoService {
 
     @Autowired
     private CorrentistaRepository correntistaRepository;
-    public void save (NovaMovimentacao novaMovimentacao){
-    Movimentacao movimentacao = new Movimentacao();
 
-    Double  valor = novaMovimentacao.getValor();
-    if(novaMovimentacao.getTipo() == MovimentacaoTipo.DESPESA)
-        valor = valor * -1;
+    public void save(NovaMovimentacao novaMovimentacao) {
+        Movimentacao movimentacao = new Movimentacao();
 
-    movimentacao.setDataHora(LocalDateTime.now());
-    movimentacao.setDescricao(novaMovimentacao.getDescricao());
-    movimentacao.setIdConta(novaMovimentacao.getIdConta());
-    movimentacao.setTipo(novaMovimentacao.getTipo());
-    movimentacao.setValor(valor); //Valor passado do calculo de acordo com a receita da regra acima.
+        Double valor = novaMovimentacao.getValor();
+        if (novaMovimentacao.getTipo() == MovimentacaoTipo.DESPESA)
+            valor = valor * -1;
+
+        movimentacao.setDataHora(LocalDateTime.now());
+        movimentacao.setDescricao(novaMovimentacao.getDescricao());
+        movimentacao.setIdConta(novaMovimentacao.getIdConta());
+        movimentacao.setTipo(novaMovimentacao.getTipo());
+        movimentacao.setValor(valor); //Valor passado do calculo de acordo com a receita da regra acima.
 
         /*Movimentação antes de você salvar, busque o Correntista e pede para o CorrentistaRepository dar um FindById pelo ID da Conta*/
         Correntista correntista = correntistaRepository.findById(novaMovimentacao.getIdConta()).orElse(null);
-        if(correntista != null){
-            correntista.getConta().setSaldo(correntista.getConta().getSaldo() +valor); //Correntista pega o saldo que já esta na conta e soma com o valor
+        if (correntista != null) {
+            correntista.getConta().setSaldo(correntista.getConta().getSaldo() + valor); //Correntista pega o saldo que já esta na conta e soma com o valor
             correntistaRepository.save(correntista);
         }
 
         repository.save(movimentacao); //Ter operações de movimentação em nosso sistema.
-}
+    }
 
 }

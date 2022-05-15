@@ -22,7 +22,7 @@ public class CorrentistaController {
     private CorrentistaService service;
 
     @GetMapping /*Dizemos que nosso metodo é uma requisição do endpoint ("/correntistas")*/
-    public List<Correntista> findAll(){
+    public List<Correntista> findAll() {
         return repository.findAll();
 
     }

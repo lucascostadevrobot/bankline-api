@@ -19,7 +19,7 @@ public class Movimentacao {
 
     /*Informo a minha classe Movimentacao qual o tipo ela será MovimentacaoTipo->Classe*/
     @Enumerated(EnumType.STRING)
-    private  MovimentacaoTipo tipo;
+    private MovimentacaoTipo tipo;
 
     public Integer getId() {
         return id;

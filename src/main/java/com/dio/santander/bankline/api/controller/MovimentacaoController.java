@@ -22,7 +22,7 @@ public class MovimentacaoController {
     private MovimentacaoService service;
 
     @GetMapping /*Dizemos que nosso metodo é uma requisição do endpoint ("/correntistas")*/
-    public List<Movimentacao> findAll(){
+    public List<Movimentacao> findAll() {
         return repository.findAll();
 
     }
